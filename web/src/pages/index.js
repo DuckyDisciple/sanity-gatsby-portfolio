@@ -10,6 +10,7 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import ProjectPreviewGrid from "../components/project-preview-grid";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
+import heroImage from "../images/hero.jpg";
 
 export const query = graphql`
   query IndexPageQuery {
@@ -101,6 +102,13 @@ const IndexPage = props => {
             If you have a project in mind, feel free to reach out and we can talk about options for
             your development needs!
           </p>
+          <img
+            src={imageUrlFor(buildImageObj(heroImage))
+              .width(800)
+              .height(Math.floor((9 / 16) * 800))
+              .url()}
+            alt="hero image"
+          />
         </section>
         <section className="projects">
           {projectNodes && (

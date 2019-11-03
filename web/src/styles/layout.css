@@ -29,12 +29,12 @@ body > div > div {
 
 .hero h1 {
   text-transform: uppercase;
-  color: white;
+  color: #333;
   opacity: 0.99;
 }
 
 .hero p {
-  color: white;
+  color: #333;
   width: 50%;
   opacity: 0.99;
 }
