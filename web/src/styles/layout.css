@@ -1,4 +1,4 @@
-@import './custom-properties.css';
+@import "./custom-properties.css";
 
 html {
   font-family: var(--font-family-sans);
@@ -18,4 +18,23 @@ body,
 body > div,
 body > div > div {
   height: 100%;
+}
+
+.hero {
+  width: 100%;
+  min-height: 30rem;
+  padding: 3rem;
+  position: relative;
+}
+
+.hero h1 {
+  text-transform: uppercase;
+  color: white;
+  opacity: 0.99;
+}
+
+.hero p {
+  color: white;
+  width: 50%;
+  opacity: 0.99;
 }

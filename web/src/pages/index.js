@@ -10,7 +10,6 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import ProjectPreviewGrid from "../components/project-preview-grid";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
-import styled from "styled-components";
 
 export const query = graphql`
   query IndexPageQuery {
@@ -60,32 +59,6 @@ export const query = graphql`
   }
 `;
 
-const Hero = styled.section`
-  width: 100%;
-  min-height: 30rem;
-  padding: 3rem;
-  position: relative;
-`;
-
-const HeroTitle = styled.h1`
-  text-transform: uppercase;
-  color: white;
-  opacity: 0.99;
-`;
-
-const HeroText = styled.p`
-  color: white;
-  width: 50%;
-  opacity: 0.99;
-`;
-
-const Projects = styled.section`
-  width: 100%;
-  min-height: 30rem;
-  padding: 3rem;
-  position: relative;
-`;
-
 const IndexPage = props => {
   const { data, errors } = props;
 
@@ -114,26 +87,26 @@ const IndexPage = props => {
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
-        <Hero>
-          <HeroTitle>Good {getTimeOfDay()}!</HeroTitle>
-          <HeroText>
+        <section className="hero">
+          <h1>Hey!</h1>
+          <p>
             I'm Drew! I've been writing code for the past 15 years. While the content and quality
             have changed, my passion has never died down. My newest ventures have led me into web
             development, with a focus on using some of the latest technologies to make sites fast,
             responsive, and pleasing to use.
-          </HeroText>
-          <HeroText>
+          </p>
+          <p>
             If you're curious what type of work I've done, check out the projects below. These are
             just some samples to show variety in the different types of apps and sites I have made.
             If you have a project in mind, feel free to reach out and we can talk about options for
             your development needs!
-          </HeroText>
-        </Hero>
-        <Projects>
+          </p>
+        </section>
+        <section className="projects">
           {projectNodes && (
             <ProjectPreviewGrid title="My Work" nodes={projectNodes} browseMoreHref="/archive/" />
           )}
-        </Projects>
+        </section>
       </Container>
     </Layout>
   );
