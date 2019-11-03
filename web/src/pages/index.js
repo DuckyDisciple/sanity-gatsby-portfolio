@@ -89,7 +89,7 @@ const IndexPage = props => {
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
         <section className="hero">
-          <info>
+          <div className="info">
             <h1>Hey!</h1>
             <p>
               I'm Drew! I've been writing code for the past 15 years. While the content and quality
@@ -103,7 +103,7 @@ const IndexPage = props => {
               made. If you have a project in mind, feel free to reach out and we can talk about
               options for your development needs!
             </p>
-          </info>
+          </div>
           <div className="image-wrapper">
             <img src={heroImage} alt="hero image" />
           </div>
